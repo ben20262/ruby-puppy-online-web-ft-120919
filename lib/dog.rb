@@ -4,7 +4,7 @@ class Dog
 
   def initialize(name)
     @name = name
-    self.save()
+    save(self)
   end
 
   def self.all
@@ -15,7 +15,7 @@ class Dog
     @@all.each {|dog| puts dog.name}
   end
 
-  def save
+  def save (self)
     @@all.push(self)
   end
 
